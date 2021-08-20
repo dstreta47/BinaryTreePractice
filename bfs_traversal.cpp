@@ -33,15 +33,6 @@ void print(node *root){
     cout<<root->data<<" ";
 }
 
-int height(node* root){
-    if(root==NULL){
-        return 0;
-    }
-    int ls = height(root->left);
-    int rs = height(root->right);
-    return max(ls,rs)+1;
-}
-
 void bfs(node *root){
     queue<node *> q;
     q.push(root);
